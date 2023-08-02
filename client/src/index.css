@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open Sans;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.blurry{
+  background: rgba(255, 255, 255, 0.339);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.hov:hover{
+  color: rgb(65, 66, 68) ;
+}
+
+.hov {
+  transition: ease-in-out 0.3s ;
+}
+
+/* Define the keyframes for the sidebar animation */
+@keyframes slideIn {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -300px;
+  }
+}
+
+.transIn{
+  animation-name: slideIn;
+}
+
+/* MyGrid */
+.myGrid{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+/* mGrid */
+.mGrid{
+  display: grid;
+  grid-template-rows: 1fr 1fr ;
+}
+
+/* Grid */
+.Grid{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* Boder hover */
+.bod:hover{
+   border: solid blue 2px ;
+   background: transparent;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.386) ;
+   transition: 0.4s ease-in ;
+}
+
+
+/* input */
+input{
+   padding: 10px;
+   width: 300px;
+   border-radius: 10px ;
+}
