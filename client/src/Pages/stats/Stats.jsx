@@ -11,7 +11,7 @@ const Stats = () => {
       <h1 className="pt-[5rem] font-semibold text-2xl text-center mb-5  " >
         Overview
        </h1>
-      <section className="  hidden md:flex justify-center pl-[rem] gap-5 " >
+      <section className="  flex justify-center pl-[rem] gap-5 " >
         {/* Charts */}
         <InvestmentChart/>
 
