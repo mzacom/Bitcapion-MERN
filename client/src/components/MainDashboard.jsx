@@ -52,11 +52,11 @@ const MainDashboard = () => {
 
             <br/><br/>
             
-            <div className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
+            <span className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
               <Link to={'/deposit'} >
                Deposit
               </Link>
-            </div>
+            </span>
 
           </p>
             
@@ -93,11 +93,11 @@ const MainDashboard = () => {
 
             <br/><br/>
             
-            <div className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
+            <span className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
               <Link to={'/deposit'} >
                Deposit
               </Link>
-            </div>
+            </span>
 
           </p>
             
@@ -134,11 +134,11 @@ const MainDashboard = () => {
 
             <br/><br/>
             
-            <div className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
+            <span className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
               <Link to={'/deposit'} >
                Deposit
               </Link>
-            </div>
+            </span>
 
           </p>
             
@@ -180,11 +180,11 @@ const MainDashboard = () => {
             
              <br/><br/>
              
-             <div className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
+             <span className=' bg-[blue] text-white rounded-lg w-[150px] text-center p-3   ' >
                <Link to={'/deposit'} >
                 Deposit
                </Link>
-             </div>
+             </span>
 
           </p>
   

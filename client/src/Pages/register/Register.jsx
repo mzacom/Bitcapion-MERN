@@ -14,7 +14,7 @@ const Register = () => {
         username,
         password,
       });
-      alert("Registration completed! Now login");
+      console.log("Registered");
     } catch (err) {
       console.error(err);
     }

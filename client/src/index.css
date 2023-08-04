@@ -59,6 +59,12 @@ a{
   -webkit-backdrop-filter: blur(9px);
 }
 
+.blurryBlue{
+  background: rgb(35, 77, 229);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
 .hov:hover{
   color: rgb(65, 66, 68) ;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {BillingsB,Dashboard,Deposits,Help,Loans,NotFound,Plans,Start,Stats,Authentication,Login,Register} from './Pages'
+
+
 import { Navbar } from './components'
 
 
@@ -20,7 +22,7 @@ const App = () => {
       <Route path='start' element={<Start/>}/>
       <Route path='billing' element={<BillingsB/>}/>
       <Route path='register' element={<Register/>}/>
-      <Route path='login' element={<Login/>}/>
+     
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     </BrowserRouter>
