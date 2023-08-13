@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "../../components";
-import InvestmentChart from "../../components/InvestmentChart";
+
 
 const Stats = () => {
   return (
@@ -13,7 +13,7 @@ const Stats = () => {
        </h1>
       <section className=" flex flex-col md:flex md:flex-row justify-center pl-[rem] gap-5 " >
         {/* Charts */}
-        <InvestmentChart/>
+       
 
       </section>
       

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const [reg, setReg] = useState(true);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -14,7 +16,7 @@ const Register = () => {
         username,
         password,
       });
-      console.log("Registered");
+      alert("Registered is Completed Now Login");
     } catch (err) {
       console.error(err);
     }
@@ -22,7 +24,7 @@ const Register = () => {
 
   return (
     <>
-      <section className=" pt-[15%] text-center flex justify-center items-center  ">
+      <section className=" pt-[15%] mt-[8rem] sm:mt-[3rem]  text-center flex justify-center items-center  ">
         <form className=" flex  flex-col  gap-3 " onSubmit={onSubmit}>
           <h1 className=" text-2xl font-semibold "> Register </h1>
           <div>
@@ -36,7 +38,7 @@ const Register = () => {
             />
           </div>
 
-          <div>
+          <div className="">
             <label htmlFor="password"> </label>
             <input
               type="password"
