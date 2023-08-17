@@ -6,11 +6,14 @@ import { FaChartLine } from "react-icons/fa";
 import { BiSolidSpreadsheet } from "react-icons/bi";
 import { RiLuggageDepositFill } from "react-icons/ri";
 import { GiReceiveMoney } from "react-icons/gi";
+import Logout from "./Logout";
 
 const Navbar = () => {
   // Side navbar
   const [openSideNav, setOpenSideNav] = useState(false);
   const [closeNav, setOpenNav] = useState(false);
+
+  const [showLog, SetShowLog] = useState(false);
 
   // Overlay
   const overLay = () => {
@@ -21,14 +24,14 @@ const Navbar = () => {
     <>
       <nav>
         {/* Top nav  */}
-        <div className=" z-[100]  fixed blurry w-full h-[50px] sm:h-[60px] bg-black items-center flex justify-between ">
+        <div className=" z-[100]  fixed blurry w-full h-[40px] sm:h-[45px] bg-black items-center flex justify-between ">
           {/* Bitcion and Logo */}
           <div className=" flex items-center gap-2 ">
             {/*Bitcion Icon  */}
             <i class="fa-brands fa-btc fa-flip text-[#ffa033] text-2xl ml-4 "></i>
 
             {/* Logo */}
-            <h1 className=" text-2xl text-black font-bold ">
+            <h1 className=" text-[16px] text-black font-bold ">
               Bit<span className=" text-[blue] ">cap</span>ion
             </h1>
 
@@ -44,7 +47,7 @@ const Navbar = () => {
               to={"/plans"}
               className={`${
                 !openSideNav ? "hidden sm:flex" : "hidden"
-              } flex  w-[130px] gap-2 p-2 bg-[#ffa033] rounded-lg shadow-lg  ml-3 items-center text-white `}
+              } flex  w-[130px] gap-2 p-[5px] bg-[#ffa033] rounded-lg shadow-lg  text-sm ml-3 items-center text-white `}
             >
               <i className=" fa-solid fa-plus fa-fade "></i> Start a Plan
             </Link>
@@ -55,8 +58,22 @@ const Navbar = () => {
             {/* Notification */}
             <i class={` text-xl fa-solid fa-bell `}></i>
 
-            {/* Message */}
-            <i class=" text-xl fa-solid fa-comment-dots"></i>
+            {/* logIn */}
+            <i
+              class="fa-solid fa-circle-user  text-xl "
+              onClick={() => SetShowLog(!showLog)}
+            ></i>
+
+            {/* Log Out */}
+            <div
+              className={`${
+                showLog
+                  ? "justify-center hidden sm:flex items-center fixed h-[40px] w-[150px] bg-[#ffffff] shadow-lg rounded-lg top-[55px] right-2 after:h-[20px] after:w-[20px] after:bg-[#ffffff] after:rotate-45 after:rounded-sm after:mt-[-30px] after:ml-[3rem]"
+                  : "hidden"
+              }    `}
+            >
+              <Logout />
+            </div>
 
             {/* Mobile side nav bar toggle */}
             <i
@@ -73,7 +90,7 @@ const Navbar = () => {
         {/* Side nav bar */}
         <div
           className={`sm:flex hidden fixed flex-col ${
-            openSideNav ? "w-[160px] pl-2 gap-3 " : "w-[60px] flex pl-2 gap-3 "
+            openSideNav ? "w-[160px] pl-2 gap-3 " : "w-[50px] flex pl-2 gap-3 "
           }  h-[100%] blurry bottom-0 pt-[5rem] z-[1]  `}
         >
           {/* Start a plan */}
@@ -99,7 +116,7 @@ const Navbar = () => {
               }
             >
               {" "}
-              <MdSpaceDashboard size={22} className=" rounded-lg " />{" "}
+              <MdSpaceDashboard size={20} className=" rounded-lg " />{" "}
               <span className={`${openSideNav ? "flex" : "hidden"}`}>
                 Dashboard{" "}
               </span>{" "}
@@ -117,7 +134,7 @@ const Navbar = () => {
               }
             >
               {" "}
-              <FaChartLine size={22} className=" rounded-md  " />{" "}
+              <FaChartLine size={20} className=" rounded-md  " />{" "}
               <span className={`${openSideNav ? "flex" : "hidden"}`}>
                 Stats{" "}
               </span>{" "}
@@ -135,7 +152,7 @@ const Navbar = () => {
               }
             >
               {" "}
-              <BiSolidSpreadsheet size={22} className=" rounded-lg  " />{" "}
+              <BiSolidSpreadsheet size={20} className=" rounded-lg  " />{" "}
               <span className={`${openSideNav ? "flex" : "hidden"}`}>
                 Plans{" "}
               </span>{" "}
@@ -153,7 +170,7 @@ const Navbar = () => {
               }
             >
               {" "}
-              <RiLuggageDepositFill size={22} className=" rounded-lg  " />{" "}
+              <RiLuggageDepositFill size={20} className=" rounded-lg  " />{" "}
               <span className={`${openSideNav ? "flex" : "hidden"}`}>
                 Finance{" "}
               </span>{" "}
@@ -171,7 +188,7 @@ const Navbar = () => {
               }
             >
               {" "}
-              <GiReceiveMoney size={22} className=" rounded-lg  " />{" "}
+              <GiReceiveMoney size={20} className=" rounded-lg  " />{" "}
               <span className={`${openSideNav ? "flex" : "hidden"}`}>
                 {" "}
                 Loans{" "}
@@ -195,12 +212,12 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? " flex w-[180px]  p-2  text-white  rounded-lg bg-[blue] gap-4 "
+                ? " flex w-[180px]  p-2  text-white  rounded-3xl bg-[blue] gap-4 "
                 : "flex w-[full]  p-2 rounded-lg  gap-3 "
             }
           >
             {" "}
-            <MdSpaceDashboard size={22} className=" rounded-md  " />{" "}
+            <MdSpaceDashboard size={20} className=" rounded-md  " />{" "}
             <span className={``}>Dashboard </span>{" "}
           </NavLink>
         </div>
@@ -216,7 +233,7 @@ const Navbar = () => {
             }
           >
             {" "}
-            <FaChartLine size={22} className=" rounded-md  " />{" "}
+            <FaChartLine size={20} className=" rounded-md  " />{" "}
             <span className={``}>Stats </span>{" "}
           </NavLink>
         </div>
@@ -232,7 +249,7 @@ const Navbar = () => {
             }
           >
             {" "}
-            <BiSolidSpreadsheet size={22} className=" rounded-md  " />{" "}
+            <BiSolidSpreadsheet size={20} className=" rounded-md  " />{" "}
             <span className={``}>Plans </span>{" "}
           </NavLink>
         </div>
@@ -248,7 +265,7 @@ const Navbar = () => {
             }
           >
             {" "}
-            <RiLuggageDepositFill size={22} className=" rounded-md  " />{" "}
+            <RiLuggageDepositFill size={20} className=" rounded-md  " />{" "}
             <span className={``}>Finace </span>{" "}
           </NavLink>
         </div>
@@ -264,7 +281,7 @@ const Navbar = () => {
             }
           >
             {" "}
-            <GiReceiveMoney size={22} className=" rounded-md  " />{" "}
+            <GiReceiveMoney size={20} className=" rounded-md  " />{" "}
             <span className={``}>Loans </span>{" "}
           </NavLink>
         </div>

@@ -7,9 +7,6 @@ import NotFound from "./notFound/NotFound";
 import Plans from "./plans/Plans";
 import Start from "./start/Start";
 import Stats from "./stats/Stats";
-import Authentication from "./authentication/Authentication";
-import Login from "./login/Login";
-import Register from "./register/Register";
 
 export {
   BillingsB,
@@ -20,8 +17,5 @@ export {
   NotFound,
   Plans,
   Start,
-  Authentication,
   Stats,
-  Login,
-  Register,
 };

@@ -1,4 +1,5 @@
 import React from 'react'
+import Logout from './Logout'
 
 
 const Dashreal = () => {
@@ -11,6 +12,9 @@ const Dashreal = () => {
         <div>
         
         </div>
+
+
+       
 
        
     </section>
